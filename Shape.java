@@ -18,6 +18,10 @@ public abstract class Shape {
 		return this._points;
 	}
 	
+	public String getType() {
+		return this._type;
+	}
+	
 	/* Setters */
 	public void setName(String name) {
 		this._name = name;
@@ -25,6 +29,11 @@ public abstract class Shape {
 	
 	public void setPoints(Point[] points) {
 		this._points = points;
+	}
+	
+	public void print() {
+		System.out.println("name: " + getName());
+		System.out.println("type: " + getType());
 	}
 	
 	/* Methods */

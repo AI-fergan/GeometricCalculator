@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
@@ -61,5 +62,15 @@ public class Menu {
 		System.out.print("Area: ");
 		System.out.println(shape.getArea());
 	}
-
+	
+	public static int getShapeIndex(ArrayList<Shape> shapes) {
+		Shape shape;
+		System.out.println("Shapes: ");
+		for(int i = 0; i < shapes.size(); i++) {
+			shape = shapes.get(i);
+			System.out.println("name" + shape.getName() + "type" + shape.getType());
+			
+		}
+		return in.nextInt();
+	}
 }
