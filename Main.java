@@ -1,10 +1,12 @@
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {		
-		LinkedList<Shape> shapes = new LinkedList<Shape>();
+        ArrayList<Shape> shapes = new ArrayList<>();
 		int option;
+		
 		do {
 			option = Menu.openScreen();
 			System.out.flush();
@@ -12,9 +14,6 @@ public class Main {
 				case 1:				
 					switch(Menu.shapesMenu()) {
 						case 1:
-							
-							break;
-						case 2:
 							shapes.add(Menu.getCircle());
 							break;
 					}

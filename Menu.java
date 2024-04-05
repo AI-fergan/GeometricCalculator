@@ -22,10 +22,8 @@ public class Menu {
 	public static int shapesMenu() {
 		int option = 0;
 		System.out.println("shapes:");
-		System.out.println("1. point");
-		System.out.println("2. circle");
-		
-		System.out.print("3. option: ");
+		System.out.println("1. circle");		
+		System.out.print("option: ");
 		
 		return in.nextInt();		
 	}
@@ -50,6 +48,18 @@ public class Menu {
 		Shape shape = new Circle(name, new Point(x, y), radius);
 		
 		return shape;
+	}
+	
+	public static void calcShape(Shape shape) {
+		System.out.println(" ---------------\n"
+						+  "| Shape details |\n"
+						+  " ---------------");
+		
+		System.out.print("Perimeter: ");
+		System.out.println(shape.getPerimeter());
+		
+		System.out.print("Area: ");
+		System.out.println(shape.getArea());
 	}
 
 }
