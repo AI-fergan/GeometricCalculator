@@ -29,4 +29,25 @@ public class Menu {
 		
 		return in.nextInt();		
 	}
+	
+	public static Circle getCicle() {
+		String name;		
+		int x, y;
+		double radius;
+		System.out.println("Circle: ");		
+		
+		System.out.print("Please enter shape name: ");
+		name = in.nextLine();
+		
+		System.out.println("please etner coordinates: ");
+		System.out.print("x = ");
+		x = in.nextInt();
+		System.out.print("y = ");
+		y = in.nextInt();
+		
+		System.out.print("please enter radius: ");
+		radius = in.nextDouble();
+			
+		return new Circle(name, new Point(x, y), radius);
+	}
 }
