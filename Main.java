@@ -6,8 +6,6 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 		LinkedList<Shape> shapes = new LinkedList<Shape>();
 		int option;
-		Circle circle = new Circle("circle", new Point(1,2), 5);
-		System.out.println(circle.getArea() + "\n");
 		System.out.println("------------------------\n"
 						 + "| Geometric Calculator |\n"
 				    	 + "------------------------");
@@ -24,6 +22,15 @@ public class Main {
 			
 			switch(option) {
 				case 1:
+					System.out.flush();
+					System.out.println("shapes:");
+					System.out.println("1. point");
+					System.out.println("2. circle");
+					System.out.print("option: ");
+					option = in.nextInt();
+					switch(option) {
+						case 1:
+					}
 					break;
 				case 2:
 					break;
