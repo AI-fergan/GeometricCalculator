@@ -19,13 +19,12 @@ public class Main {
 					}
 					break;
 				case 2:
+					shapes.remove(Menu.getShapeIndex(shapes));
 					break;
 				case 3:					
 					Menu.calcShape(Menu.getShapeIndex(shapes));					
 					break;
 				case 4:
-					break;
-				case 5:
 					System.out.println("Bye !");
 					break;
 				default:
