@@ -1,13 +1,13 @@
 import java.util.LinkedList;
 import java.util.Scanner;
-
 public class Main {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		LinkedList<Shape> shapes = new LinkedList<Shape>();
 		int option;
-		
+		Circle circle = new Circle("circle", new Point(1,2), 5);
+		System.out.println(circle.getArea() + "\n");
 		System.out.println("------------------------\n"
 						 + "| Geometric Calculator |\n"
 				    	 + "------------------------");
@@ -15,7 +15,7 @@ public class Main {
 		System.out.println("1. Add Shape\n"
 						 + "2. Remove Shape\n"
 						 + "3. Calc Shape\n"
-						 + "4. Print all the shapes\n"
+						 + "4. Print all shapes\n"
 						 + "5. Exit");
 		
 		do {
