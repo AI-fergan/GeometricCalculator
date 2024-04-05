@@ -1,6 +1,7 @@
 public abstract class Shape {
 	private String _name;
 	private Point[] _points;
+	protected String _type;
 	
 	/* C'tors */
 	Shape(String name, Point[] points) {

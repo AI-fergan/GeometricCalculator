@@ -30,7 +30,7 @@ public class Menu {
 		return in.nextInt();		
 	}
 	
-	public static Circle getCicle() {
+	public static Shape getCircle() {
 		String name;		
 		int x, y;
 		double radius;
@@ -47,7 +47,9 @@ public class Menu {
 		
 		System.out.print("please enter radius: ");
 		radius = in.nextDouble();
-			
-		return new Circle(name, new Point(x, y), radius);
+		Shape shape = new Circle(name, new Point(x, y), radius);
+		
+		return shape;
 	}
+
 }

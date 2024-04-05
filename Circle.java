@@ -3,6 +3,7 @@ public class Circle extends Shape {
 	Circle(String name, Point point, double radius) {
 	    super(name, new Point[]{point});
 	    this._radius = radius;
+	    this._type = "circle";
 	}
 
 	@Override
