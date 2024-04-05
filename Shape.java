@@ -31,10 +31,10 @@ public abstract class Shape {
 		this._points = points;
 	}
 	
-	public void print() {
-		System.out.println("name: " + getName());
-		System.out.println("type: " + getType());
-	}
+	@Override
+    public String toString() {
+        return "name: " + getName() + "\ntype: " + getType() + "\n";
+    }
 	
 	/* Methods */
 	public abstract double getArea();
