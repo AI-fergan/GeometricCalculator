@@ -1,15 +1,15 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Scanner;
 public class Main {
 
-	public static void main(String[] args) {		
+	public static void main(String[] args) throws IOException, InterruptedException {		
         ArrayList<Shape> shapes = new ArrayList<>();
 		int option;
 		
 		do {
-			option = Menu.openScreen();
-			System.out.flush();
+			option = Menu.openScreen();			
 			switch(option) {
 				case 1:				
 					switch(Menu.shapesMenu()) {
@@ -21,7 +21,7 @@ public class Main {
 				case 2:
 					break;
 				case 3:					
-					Menu.calcShape();
+					Menu.calcShape(Menu.getShapeIndex(shapes));					
 					break;
 				case 4:
 					break;

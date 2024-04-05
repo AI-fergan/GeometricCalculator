@@ -36,10 +36,12 @@ public class Menu {
 		System.out.println("Circle: ");		
 		
 		System.out.print("Please enter shape name: ");
+		in.nextLine();
 		name = in.nextLine();
 		
 		System.out.println("please etner coordinates: ");
 		System.out.print("x = ");
+		
 		x = in.nextInt();
 		System.out.print("y = ");
 		y = in.nextInt();
@@ -63,14 +65,17 @@ public class Menu {
 		System.out.println(shape.getArea());
 	}
 	
-	public static int getShapeIndex(ArrayList<Shape> shapes) {
+	public static Shape getShapeIndex(ArrayList<Shape> shapes) {
 		Shape shape;
 		System.out.println("Shapes: ");
 		for(int i = 0; i < shapes.size(); i++) {
 			shape = shapes.get(i);
-			System.out.println("name" + shape.getName() + "type" + shape.getType());
-			
+			System.out.println("shape " + i + ".\n" + shape);			
 		}
-		return in.nextInt();
+		
+		System.out.print("option: ");
+		
+		return shapes.get(in.nextInt());
 	}
+
 }
