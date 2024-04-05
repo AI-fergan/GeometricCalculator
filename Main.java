@@ -16,6 +16,8 @@ public class Main {
 						case 1:
 							shapes.add(Menu.getCircle());
 							break;
+						case 2:
+							shapes.add(Menu.getLine());
 					}
 					break;
 				case 2:
@@ -28,10 +30,10 @@ public class Main {
 					System.out.println("Bye !");
 					break;
 				default:
-					System.out.println("please choose only between 1 - 5");
+					System.out.println("please choose only between 1 - 4");
 			}
 			
-		} while(option != 5);
+		} while(option != 4);
 	}
 
 }
