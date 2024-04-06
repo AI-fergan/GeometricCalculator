@@ -1,6 +1,7 @@
 import java.awt.Color;
+import java.awt.Graphics;
 
-public class Triangle  extends Shape {
+public class Triangle extends Shape {
 
 	Triangle(String name, Point[] points, Color color) {
 		super(name, points);
@@ -28,6 +29,11 @@ public class Triangle  extends Shape {
 		Line line3 = new Line("", new Point[]{getPoints()[1], getPoints()[2]}, Color.black);
 		
 		return line1.getPerimeter() + line2.getPerimeter() + line3.getPerimeter();
+	}
+
+	@Override
+	public void draw(Graphics g) {		
+		Canvas.drawTriangle(g, this);
 	}
 
 }

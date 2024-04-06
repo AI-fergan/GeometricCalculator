@@ -1,4 +1,4 @@
-/*import java.io.IOException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -34,42 +34,16 @@ public class Main {
 					Menu.calcShape(Menu.getShapeIndex(shapes));					
 					break;
 				case 4:
+					Canvas.paint(shapes);
+					break;
+				case 5:
 					System.out.println("Bye !");
 					break;
 				default:
 					System.out.println("please choose only between 1 - 4");
 			}
 			
-		} while(option != 4);
+		} while(option != 5);
 	}
 
-}
-*/
-import javax.swing.*;
-import java.awt.*;
-
-public class Main {
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            JFrame frame = new JFrame("Shapes Example");
-            frame.setSize(400, 400);
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setVisible(true);
-
-            JPanel panel = new JPanel() {
-                @Override
-                protected void paintComponent(Graphics g) {
-                    super.paintComponent(g);
-                    // Draw a rectangle
-                    g.setColor(Color.RED);
-                    g.fillRect(50, 50, 100, 50);
-
-                    // Draw a circle
-                    g.setColor(Color.BLUE);
-                    g.fillOval(200, 100, 50, 50);
-                }
-            };
-            frame.add(panel);
-        });
-    }
 }

@@ -13,7 +13,8 @@ public class Menu {
 		System.out.println("1. Add Shape\n"
 						 + "2. Remove Shape\n"
 						 + "3. Calc Shape\n"
-						 + "4. Exit");
+						 + "4. Canvas\n"
+						 + "5. Exit");
 		
 		System.out.print("option: ");
 		

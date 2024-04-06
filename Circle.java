@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Graphics;
 
 public class Circle extends Shape {
 	private double _radius;
@@ -21,6 +22,11 @@ public class Circle extends Shape {
 	@Override
 	public double getPerimeter() {
 		return 2 * 3.14 * _radius;
+	}
+
+	@Override
+	public void draw(Graphics g) {
+		Canvas.drawCircle(g, this);
 	}
 
 }

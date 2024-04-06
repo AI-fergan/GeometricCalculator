@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Graphics;
 
 public class Line extends Shape{
 
@@ -16,6 +17,11 @@ public class Line extends Shape{
 	@Override
 	public double getPerimeter() {
 		return Math.sqrt(Math.pow(getPoints()[0].getX() - getPoints()[1].getX(), 2) + Math.pow((getPoints()[0].getY() - getPoints()[1].getY()), 2));
+	}
+
+	@Override
+	public void draw(Graphics g) {
+		Canvas.drawLine(g, this);
 	}
 	
 	

@@ -1,8 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class Canvas {
-    public static void paint(Shape[] shapes) {
+    public static void paint(ArrayList<Shape> shapes) {
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("Shapes Example");
             frame.setSize(400, 400);
@@ -13,6 +14,9 @@ public class Canvas {
                 @Override
                 protected void paintComponent(Graphics g) {
                     super.paintComponent(g);
+                    for(int i = 0; i < shapes.size(); i++) {
+                    	shapes.get(i).draw(g);
+                    }
                 }
             };
             frame.add(panel);

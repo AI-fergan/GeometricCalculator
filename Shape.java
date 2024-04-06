@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Graphics;
 
 public abstract class Shape {
 	private String _name;
@@ -42,5 +43,6 @@ public abstract class Shape {
 	/* Methods */
 	public abstract double getArea();
 	public abstract double getPerimeter();
+	public abstract void draw(Graphics g);
 	
 }
