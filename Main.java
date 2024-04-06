@@ -18,6 +18,13 @@ public class Main {
 							break;
 						case 2:
 							shapes.add(Menu.getLine());
+							break;
+						case 3:
+							shapes.add(Menu.getTriangle());
+							break;
+						default:
+							System.out.println("Invalid shape :(");
+							break;
 					}
 					break;
 				case 2:
