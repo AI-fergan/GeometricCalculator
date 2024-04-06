@@ -1,16 +1,18 @@
+import java.awt.Color;
 
 public class Triangle  extends Shape {
 
-	Triangle(String name, Point[] points) {
+	Triangle(String name, Point[] points, Color color) {
 		super(name, points);
 		this._type = "Triangle";
+		this._color = color;
 	}
 
 	@Override
 	public double getArea() {
-		Line line1 = new Line("", new Point[]{getPoints()[0], getPoints()[1]});
-		Line line2 = new Line("", new Point[]{getPoints()[0], getPoints()[2]});
-		Line line3 = new Line("", new Point[]{getPoints()[1], getPoints()[2]});
+		Line line1 = new Line("", new Point[]{getPoints()[0], getPoints()[1]}, Color.black);
+		Line line2 = new Line("", new Point[]{getPoints()[0], getPoints()[2]}, Color.black);
+		Line line3 = new Line("", new Point[]{getPoints()[1], getPoints()[2]}, Color.black);
 	    
 	    double s = (line1.getPerimeter() + line2.getPerimeter() + line3.getPerimeter()) / 2;
 	    
@@ -21,9 +23,9 @@ public class Triangle  extends Shape {
 
 	@Override
 	public double getPerimeter() {
-		Line line1 = new Line("", new Point[]{getPoints()[0], getPoints()[1]});
-		Line line2 = new Line("", new Point[]{getPoints()[0], getPoints()[2]});
-		Line line3 = new Line("", new Point[]{getPoints()[1], getPoints()[2]});
+		Line line1 = new Line("", new Point[]{getPoints()[0], getPoints()[1]}, Color.black);
+		Line line2 = new Line("", new Point[]{getPoints()[0], getPoints()[2]}, Color.black);
+		Line line3 = new Line("", new Point[]{getPoints()[1], getPoints()[2]}, Color.black);
 		
 		return line1.getPerimeter() + line2.getPerimeter() + line3.getPerimeter();
 	}

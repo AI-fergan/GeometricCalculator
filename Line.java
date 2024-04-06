@@ -1,9 +1,11 @@
+import java.awt.Color;
 
 public class Line extends Shape{
 
-	Line(String name, Point[] points) {
+	Line(String name, Point[] points, Color color) {
 		super(name, points);
 		this._type = "line";
+		this._color = color;
 	}
 
 	@Override

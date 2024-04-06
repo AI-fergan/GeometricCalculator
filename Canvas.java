@@ -13,16 +13,30 @@ public class Canvas {
                 @Override
                 protected void paintComponent(Graphics g) {
                     super.paintComponent(g);
-                    // Draw a rectangle
-                    g.setColor(Color.RED);
-                    g.fillRect(50, 50, 100, 50);
-
-                    // Draw a circle
-                    g.setColor(Color.BLUE);
-                    g.fillOval(200, 100, 50, 50);
                 }
             };
             frame.add(panel);
         });
+    }
+    
+    public static void drawCircle(Graphics g, Circle circle) {
+    	// Draw a circle
+        g.setColor(circle._color);
+        g.fillOval(circle.getPoints()[0].getX(), circle.getPoints()[0].getY(), (int)circle.getRadius(), (int)circle.getRadius());
+    }
+    
+    public static void drawLine(Graphics g, Line line) {
+    	// Draw a line
+        g.setColor(line._color);
+        g.drawLine(line.getPoints()[0].getX(), line.getPoints()[0].getY(), line.getPoints()[1].getX(), line.getPoints()[1].getY());
+    }
+    
+    public static void drawTriangle(Graphics g, Triangle triangle) {
+    	int[] xPoints = {triangle.getPoints()[0].getX(), triangle.getPoints()[1].getX(), triangle.getPoints()[2].getX()};
+        int[] yPoints = {triangle.getPoints()[0].getY(), triangle.getPoints()[1].getY(), triangle.getPoints()[2].getY()};
+        
+        // Draw a triangle
+        g.setColor(triangle._color);
+        g.fillPolygon(xPoints, yPoints, 3);
     }
 }

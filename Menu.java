@@ -97,7 +97,7 @@ public class Menu {
 		System.out.print("y = ");
 		y2 = in.nextInt();
 
-		Shape shape = new Line(name, new Point[] {new Point(x1, y1), new Point(x2, y2)});
+		Shape shape = new Line(name, new Point[] {new Point(x1, y1), new Point(x2, y2)}, getColor());
 		
 		return shape;
 	}
@@ -132,7 +132,7 @@ public class Menu {
 		System.out.print("y = ");
 		y3 = in.nextInt();
 
-		Shape shape = new Triangle(name, new Point[] {new Point(x1, y1), new Point(x2, y2), new Point(x3, y3)});
+		Shape shape = new Triangle(name, new Point[] {new Point(x1, y1), new Point(x2, y2), new Point(x3, y3)}, getColor());
 		
 		return shape;
 	}
