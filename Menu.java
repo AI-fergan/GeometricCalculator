@@ -24,6 +24,7 @@ public class Menu {
 		System.out.println("shapes:");
 		System.out.println("1. circle");
 		System.out.println("2. line");
+		System.out.println("3. triangle");
 		System.out.print("option: ");
 		
 		return in.nextInt();		
@@ -77,6 +78,41 @@ public class Menu {
 		y2 = in.nextInt();
 
 		Shape shape = new Line(name, new Point[] {new Point(x1, y1), new Point(x2, y2)});
+		
+		return shape;
+	}
+	
+	public static Shape getTriangle() {
+		String name;		
+		int x1, y1, x2, y2, x3, y3;
+		System.out.println("Triangle: ");		
+		
+		System.out.print("Please enter shape name: ");
+		in.nextLine();
+		name = in.nextLine();
+		
+		System.out.println("Point 1:");
+		System.out.print("x = ");
+		
+		x1 = in.nextInt();
+		System.out.print("y = ");
+		y1 = in.nextInt();
+		
+		System.out.println("Point 2:");
+		System.out.print("x = ");
+		
+		x2 = in.nextInt();
+		System.out.print("y = ");
+		y2 = in.nextInt();
+		
+		System.out.println("Point 3:");
+		System.out.print("x = ");
+		
+		x3 = in.nextInt();
+		System.out.print("y = ");
+		y3 = in.nextInt();
+
+		Shape shape = new Triangle(name, new Point[] {new Point(x1, y1), new Point(x2, y2), new Point(x3, y3)});
 		
 		return shape;
 	}
