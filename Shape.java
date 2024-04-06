@@ -1,7 +1,10 @@
+import java.awt.Color;
+
 public abstract class Shape {
 	private String _name;
 	private Point[] _points;
 	protected String _type;
+	protected Color _color;
 	
 	/* C'tors */
 	Shape(String name, Point[] points) {

@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -30,6 +31,25 @@ public class Menu {
 		return in.nextInt();		
 	}
 	
+	public static Color getColor() {
+		System.out.println("(Note: default color is black)");
+		System.out.println("Colors:");
+		System.out.println("1. Red");
+		System.out.println("2. Green");
+		System.out.println("3. Blue");
+		
+		switch(in.nextInt()) {
+		case 1:
+			return Color.RED;
+		case 2:
+			return Color.GREEN;
+		case 3:
+			return Color.BLUE;
+		}
+		
+		return Color.BLACK;
+	}
+	
 	public static Shape getCircle() {
 		String name;		
 		int x, y;
@@ -49,7 +69,7 @@ public class Menu {
 		
 		System.out.print("please enter radius: ");
 		radius = in.nextDouble();
-		Shape shape = new Circle(name, new Point(x, y), radius);
+		Shape shape = new Circle(name, new Point(x, y), radius, getColor());
 		
 		return shape;
 	}
